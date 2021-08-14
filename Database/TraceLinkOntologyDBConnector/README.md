@@ -6,7 +6,7 @@
 ### Other Version
  JDK1.8+ should also work with this project but any JDK below version 1.8 is not supported.
 ### Known Problem with JDK11+
- When program was stared several warning messages will pop up like lines below
+ When program was stared several warning messages will pop up like the lines below
 
 `WARNING: An illegal reflective access operation has occurred`
 

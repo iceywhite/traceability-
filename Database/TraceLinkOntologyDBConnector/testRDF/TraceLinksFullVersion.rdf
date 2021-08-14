@@ -1,0 +1,416 @@
+﻿<?xml version = '1.0' encoding = 'UTF-8'?>
+<rdf:RDF xmlns="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#" xml:base="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#" />
+  <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#hasDefinition -->
+  <owl:DatatypeProperty rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#hasDefinition" />
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#hasName -->
+  <owl:DatatypeProperty rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#hasName" />
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#hasUsage -->
+  <owl:DatatypeProperty rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#hasUsage" />
+  <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Conflict -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Conflict">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ReLink" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ConsistentWith -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ConsistentWith">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Static" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Contribution -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Contribution">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ReLink" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dependency -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dependency">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ProductRelatedLink" />
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ReLink" />
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Static" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Directional -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Directional">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#SeLink" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dynamic -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dynamic">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ModelToModel" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Evolution -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Evolution">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ProcesRelatedLink" />
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ReLink" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Explicit -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Explicit">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#MdeLink" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Generalize -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Generalize">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ReLink" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Horizontal -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Horizontal">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#TraceLink" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Implicit -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Implicit">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#MdeLink" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Inter -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Inter">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Macro" />
+          <rdf:Description rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Micro" />
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Intra -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Intra">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Macro" />
+          <rdf:Description rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Micro" />
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Macro -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Macro">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Directional" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#MdeLink -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#MdeLink">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Horizontal" />
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#TraceLink" />
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Vertical" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Micro -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Micro">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Directional" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ModelToArtifact -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ModelToArtifact">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Explicit" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ModelToModel -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ModelToModel">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Explicit" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Overlap -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Overlap">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ReLink" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ProcesRelatedLink -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ProcesRelatedLink">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ReLink" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ProductRelatedLink -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ProductRelatedLink">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ReLink" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Rationale -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Rationale">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ProcesRelatedLink" />
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ReLink" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ReLink -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ReLink">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Horizontal" />
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#TraceLink" />
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Vertical" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Satisfy -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Satisfy">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ProductRelatedLink" />
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ReLink" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#SeLink -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#SeLink">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Horizontal" />
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#TraceLink" />
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Vertical" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Static -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Static">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ModelToModel" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Temporal -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Temporal">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#SeLink" />
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#TraceLink -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#TraceLink">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#hasUsage" />
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#hasDefinition" />
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#hasName" />
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Vertical -->
+  <owl:Class rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Vertical">
+    <rdfs:subClassOf rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#TraceLink" />
+  </owl:Class>
+  <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Adapt -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Adapt">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Overlap" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Affect -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Affect">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Conflict" />
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Rationale" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#AllocatedTo -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#AllocatedTo">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Evolution" />
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ModelToArtifact" />
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Satisfy" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#BaseOn -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#BaseOn">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Evolution" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#BasedOn -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#BasedOn">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Conflict" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Call -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Call">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dynamic" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#CasualDependencyConformance -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#CasualDependencyConformance">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dependency" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Contain -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Contain">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dependency" />
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Generalize" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Contribute -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Contribute">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Satisfy" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Correspondence -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Correspondence">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dependency" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#CreatedBy -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#CreatedBy">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Satisfy" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Define -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Define">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Satisfy" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#DependOn -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#DependOn">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Evolution" />
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Satisfy" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dependency -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dependency">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+    <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">depends-on</hasName>
+    <hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link between 2 artifacts where the existence of one depends on the existence of the other</hasDefinition>
+    <hasUsage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">links 2 co-existed artifacts</hasUsage>
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Derive -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Derive">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Evolution" />
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Satisfy" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Developmental -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Developmental">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dependency" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Elaborate -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Elaborate">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Evolution" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Establish -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Establish">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Satisfy" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Explain -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Explain">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ModelToArtifact" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Export -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Export">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dependency" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Generate -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Generate">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Conflict" />
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dynamic" />
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Evolution" />
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Satisfy" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#HasA -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#HasA">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dependency" />
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Evolution" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Import -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Import">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dependency" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Inconsistency -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Inconsistency">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Conflict" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#InterfaceWith -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#InterfaceWith">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Satisfy" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#IsA -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#IsA">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dependency" />
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Evolution" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#NonCausalConformance -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#NonCausalConformance">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Evolution" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Notify -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Notify">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dynamic" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#PartOf -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#PartOf">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dependency" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Perform -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Perform">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ModelToArtifact" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#PerformedBy -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#PerformedBy">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dependency" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Refine -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Refine">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dependency" />
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Generalize" />
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Satisfy" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Replace -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Replace">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Evolution" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#RequireFeaturesIn -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#RequireFeaturesIn">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dependency" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Resolve -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Resolve">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Conflict" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Satisfy -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Satisfy">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ModelToArtifact" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Select -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Select">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Rationale" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Support -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Support">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#ModelToArtifact" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Temporal -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Temporal">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Evolution" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Usage -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Usage">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dependency" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#UsedBy -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#UsedBy">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dependency" />
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Evolution" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+  <!-- http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Verify -->
+  <owl:Thing rdf:about="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Verify">
+    <rdf:type rdf:resource="http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Satisfy" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual" />
+  </owl:Thing>
+</rdf:RDF>
+<!--Generated by Cognitum FluentEditor2015, a part of Ontorion(TM) Knowledge Management Framework, (with support of OwlApi)-->
