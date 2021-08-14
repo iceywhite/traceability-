@@ -31,6 +31,10 @@ public class RDFOntology {
 		ReasonerFactory rf = new ReasonerFactory();
 		return rf.createReasoner(getOntology());
 	}
+	
+	public OWLDataFactory getDataFactory() {
+		return this.getOntology().getOWLOntologyManager().getOWLDataFactory();
+	}
 
 	private static OWLOntology readFromFile(File file) throws OWLOntologyCreationException {
 		//Read trace link ontology from RDF file
