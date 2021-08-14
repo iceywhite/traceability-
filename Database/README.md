@@ -8,6 +8,7 @@
  (* stands for developing, not finished)
 ## Recommended Environment
  MySQL Community 8.0.26
+ 
  JDK1.8.0_301
 
 ## Developing features
