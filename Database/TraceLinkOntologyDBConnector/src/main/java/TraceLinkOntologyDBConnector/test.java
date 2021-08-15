@@ -13,9 +13,10 @@ public class test {
 			RDFOntology ont = new RDFOntology(new File("testRDF/TraceLinksFullVersion.rdf"));
 			//Read test
 			System.out.println(ont.getOntology());
-			//Print all instances of class Dependency
-			IRI iri = IRI.create("http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Dependency");
-			ont.getReasoner().getInstances(ont.getDataFactory().getOWLClass(iri)).entities().forEach(System.out::println);
+			//Print all superclass of class Inter
+			System.out.println("\nSuperclass of class Inter: \n");
+			IRI iri = IRI.create("http://www.ontorion.com/ontologies/Ontology92f6fe28b5854078a984b0607d68f51e#Inter");
+			ont.getReasoner().getSuperClasses(RDFOntology.getDataFactory().getOWLClass(iri)).entities().forEach(System.out::println);
 		} catch (OWLOntologyCreationException e) {
 			System.out.println("Error: Fail to read tracelink ontology from file. Please check your RDF file.");
 			// TODO Auto-generated catch block
