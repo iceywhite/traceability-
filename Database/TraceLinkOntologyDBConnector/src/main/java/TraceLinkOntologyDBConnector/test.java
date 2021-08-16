@@ -10,7 +10,7 @@ public class test {
 	public static void main(String[] args) {
 		try {
 			//Read trace link ontology from RDF file
-			RDFOntology ont = new RDFOntology(new File("testRDF/TraceLinksFullVersion.rdf"));
+			RDFOntology ont = new RDFOntology(new File("sampleRDF/TraceLinksFullVersion.rdf"));
 			//Read test
 			System.out.println(ont.getOntology());
 			//Print all superclass of class Inter
