@@ -69,6 +69,11 @@ public class RDFOntology {
 		ReasonerFactory rf = new ReasonerFactory();
 		return rf.createReasoner(getOntology());
 	}
+	
+	// Check whether the trace link ontology is consistent
+	public boolean isConsistant() {
+		return getReasoner().isConsistent();
+	}
 
 	// Read trace link ontology from RDF file
 	private static OWLOntology readFromFile(File file) throws OWLOntologyCreationException {
