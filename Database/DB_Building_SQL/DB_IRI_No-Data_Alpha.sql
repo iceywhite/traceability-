@@ -50,20 +50,20 @@ DROP TABLE IF EXISTS `artifact`;
 CREATE TABLE IF NOT EXISTS `artifact` (
   `Ar_IRI` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `Name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT 'Unnamed Artifact',
-  `Current_Version_IRI` int unsigned DEFAULT NULL COMMENT 'The current version of the artifact',
-  `Original_Version_IRI` int unsigned DEFAULT NULL COMMENT 'The original version of the artifact',
-  `Current_Info_IRI` int unsigned DEFAULT NULL COMMENT 'The current version of the artifact information',
-  `Original_Info_IRI` int unsigned DEFAULT NULL COMMENT 'The original version of the artifact information',
+  `Current_Version_ID` int unsigned DEFAULT NULL COMMENT 'The current version of the artifact',
+  `Original_Version_ID` int unsigned DEFAULT NULL COMMENT 'The original version of the artifact',
+  `Current_Info_ID` int unsigned DEFAULT NULL COMMENT 'The current version of the artifact information',
+  `Original_Info_ID` int unsigned DEFAULT NULL COMMENT 'The original version of the artifact information',
   `Description` text CHARACTER SET utf8 COLLATE utf8_general_ci,
   PRIMARY KEY (`Ar_IRI`) USING BTREE,
-  UNIQUE KEY `Version_Latest` (`Current_Version_IRI`) USING BTREE,
-  UNIQUE KEY `FK_Ar_OriginalVersion` (`Original_Version_IRI`) USING BTREE,
-  UNIQUE KEY `FK_Ar_Info_CurrentVersion` (`Current_Info_IRI`) USING BTREE,
-  UNIQUE KEY `FK_Ar_Info_OriginalVersion` (`Original_Info_IRI`) USING BTREE,
-  CONSTRAINT `FK_Ar_Current_Info_Version` FOREIGN KEY (`Current_Info_IRI`) REFERENCES `ar_info` (`Ar_Info_ID`) ON DELETE RESTRICT ON UPDATE CASCADE,
-  CONSTRAINT `FK_Ar_Current_Version` FOREIGN KEY (`Current_Version_IRI`) REFERENCES `ar_version` (`Ar_Version_ID`) ON DELETE RESTRICT ON UPDATE CASCADE,
-  CONSTRAINT `FK_Ar_Original_Info_Version` FOREIGN KEY (`Original_Info_IRI`) REFERENCES `ar_info` (`Ar_Info_ID`) ON DELETE SET NULL ON UPDATE CASCADE,
-  CONSTRAINT `FK_Ar_Original_Version` FOREIGN KEY (`Original_Version_IRI`) REFERENCES `ar_version` (`Ar_Version_ID`) ON DELETE SET NULL ON UPDATE CASCADE
+  UNIQUE KEY `Version_Latest` (`Current_Version_ID`) USING BTREE,
+  UNIQUE KEY `FK_Ar_OriginalVersion` (`Original_Version_ID`) USING BTREE,
+  UNIQUE KEY `FK_Ar_Info_CurrentVersion` (`Current_Info_ID`) USING BTREE,
+  UNIQUE KEY `FK_Ar_Info_OriginalVersion` (`Original_Info_ID`) USING BTREE,
+  CONSTRAINT `FK_Ar_Current_Info_Version` FOREIGN KEY (`Current_Info_ID`) REFERENCES `ar_info` (`Ar_Info_ID`) ON DELETE RESTRICT ON UPDATE CASCADE,
+  CONSTRAINT `FK_Ar_Current_Version` FOREIGN KEY (`Current_Version_ID`) REFERENCES `ar_version` (`Ar_Version_ID`) ON DELETE RESTRICT ON UPDATE CASCADE,
+  CONSTRAINT `FK_Ar_Original_Info_Version` FOREIGN KEY (`Original_Info_ID`) REFERENCES `ar_info` (`Ar_Info_ID`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `FK_Ar_Original_Version` FOREIGN KEY (`Original_Version_ID`) REFERENCES `ar_version` (`Ar_Version_ID`) ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='The list of artifacts providing the current version of the artifacts.\r\nHaving the name field as redundancy for searching speed.';
 
 -- Data exporting was unselected.
@@ -265,7 +265,6 @@ DROP TABLE IF EXISTS `tl_class`;
 CREATE TABLE IF NOT EXISTS `tl_class` (
   `Tl_Class_IRI` varchar(255) NOT NULL,
   `Name` varchar(50) NOT NULL,
-  `Update_Time` timestamp NOT NULL,
   PRIMARY KEY (`Tl_Class_IRI`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='The classes of tracelinks (including all super-classes and subclasses)';
 
@@ -288,15 +287,15 @@ CREATE TABLE IF NOT EXISTS `tl_class_hierarchy` (
 -- Dumping structure for table traceability.tl_class_join_tbl
 DROP TABLE IF EXISTS `tl_class_join_tbl`;
 CREATE TABLE IF NOT EXISTS `tl_class_join_tbl` (
-  `Tl_IRI` varchar(255) NOT NULL,
+  `Tl_Type_IRI` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `Tl_Class_IRI` varchar(255) NOT NULL,
   `Annotation` text,
-  PRIMARY KEY (`Tl_IRI`,`Tl_Class_IRI`),
-  KEY `Tl_IRI` (`Tl_IRI`),
+  PRIMARY KEY (`Tl_Type_IRI`,`Tl_Class_IRI`) USING BTREE,
   KEY `Tl_Class_IRI` (`Tl_Class_IRI`),
-  CONSTRAINT `FK_Tl_Class_Join_Tl_Class_IRI` FOREIGN KEY (`Tl_Class_IRI`) REFERENCES `tl_class` (`Tl_Class_IRI`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `FK_Tl_Class_Join_Tl_IRI` FOREIGN KEY (`Tl_IRI`) REFERENCES `tracelink` (`Tl_IRI`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='The join table describing the instanceOf relationship between tracelinks and tl_classes';
+  KEY `Tl_IRI` (`Tl_Type_IRI`) USING BTREE,
+  CONSTRAINT `FK_tl_class_join_tbl_tl_type` FOREIGN KEY (`Tl_Type_IRI`) REFERENCES `tl_type` (`Tl_Type_IRI`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_Tl_Class_Join_Tl_Class_IRI` FOREIGN KEY (`Tl_Class_IRI`) REFERENCES `tl_class` (`Tl_Class_IRI`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='The join table describing the instanceOf relationship between tracelinks and tl_classes\r\nOne trace link should only join with its DIRECT type in this table';
 
 -- Data exporting was unselected.
 
@@ -306,6 +305,7 @@ CREATE TABLE IF NOT EXISTS `tl_info` (
   `Tl_Info_ID` int unsigned NOT NULL AUTO_INCREMENT,
   `Tl_IRI` varchar(255) NOT NULL,
   `Name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT 'Unnamed Artifact' COMMENT 'Name of the tracelink',
+  `Tl_Type_IRI` varchar(255) NOT NULL,
   `Owner` varchar(255) NOT NULL COMMENT 'User ID of the owner',
   `Description` text CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT 'Reason of modification',
   `Attachment` text CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT '?',
@@ -316,10 +316,12 @@ CREATE TABLE IF NOT EXISTS `tl_info` (
   KEY `FK_Tl_info_version_Modifier` (`Mod_ID`) USING BTREE,
   KEY `FK_Tl_Info_Version_ModifiedOn` (`ModifiedOn`) USING BTREE,
   KEY `Tl_info_Version` (`Tl_IRI`) USING BTREE,
+  KEY `FK_Tl_Info_Tl_Type_IRI` (`Tl_Type_IRI`),
   CONSTRAINT `FK_Tl_Info_Mod_ID` FOREIGN KEY (`Mod_ID`) REFERENCES `modification` (`Mod_ID`) ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT `FK_Tl_Info_ModifiedOn` FOREIGN KEY (`ModifiedOn`) REFERENCES `tl_info` (`Tl_Info_ID`) ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT `FK_Tl_Info_Owner` FOREIGN KEY (`Owner`) REFERENCES `user` (`User_IRI`) ON DELETE RESTRICT ON UPDATE CASCADE,
-  CONSTRAINT `FK_Tl_Info_Tl_IRI` FOREIGN KEY (`Tl_IRI`) REFERENCES `tracelink` (`Tl_IRI`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `FK_Tl_Info_Tl_IRI` FOREIGN KEY (`Tl_IRI`) REFERENCES `tracelink` (`Tl_IRI`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_Tl_Info_Tl_Type_IRI` FOREIGN KEY (`Tl_Type_IRI`) REFERENCES `tl_type` (`Tl_Type_IRI`) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3 ROW_FORMAT=DYNAMIC COMMENT='The current and past versions of information of the trace link in the trace link table.';
 
 -- Data exporting was unselected.
@@ -336,6 +338,16 @@ CREATE TABLE IF NOT EXISTS `tl_info$tr_characterization` (
   CONSTRAINT `FK_Tl_Char_Info` FOREIGN KEY (`Tl_Char_IRI`) REFERENCES `tl_characterization` (`Tl_Char_IRI`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_Tl_info_Char` FOREIGN KEY (`Tl_Info_ID`) REFERENCES `tl_info` (`Tl_Info_ID`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 ROW_FORMAT=DYNAMIC COMMENT='The join table used to explain which characterizations are defined to a version';
+
+-- Data exporting was unselected.
+
+-- Dumping structure for table traceability.tl_type
+DROP TABLE IF EXISTS `tl_type`;
+CREATE TABLE IF NOT EXISTS `tl_type` (
+  `Tl_Type_IRI` varchar(255) NOT NULL,
+  `Name` varchar(50) NOT NULL,
+  PRIMARY KEY (`Tl_Type_IRI`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- Data exporting was unselected.
 
